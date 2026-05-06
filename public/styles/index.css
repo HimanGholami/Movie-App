@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-himan: #707070;
+  --color-dark-bg: #020618;
+  --color-dark-header-bg: #1d293d;
+
+  --font-Dana: "Dana";
+}
+@layer base {
+  @font-face {
+    font-family: "Dana";
+    src: url("../fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
+    font-display: swap;
+  }
 }
