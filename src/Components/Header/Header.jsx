@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="w-[90%] mx-auto bg-dark-header-bg rounded-4xl px-12 py-4 fixed top-10 right-0 left-0">
+    <header className="w-[90%] mx-auto bg-dark-header-bg rounded-4xl px-12 py-4 mt-15">
       <div className="flex justify-between items-center">
         {/* Logo & nav */}
         <div className="flex items-center">
@@ -25,7 +25,7 @@ function Header() {
         </div>
         {/* Search & Theme Icon */}
         <div className="flex items-center">
-          <div className="flex justify-between items-center bg-[#5B5C6B] w-75 ml-27 rounded-4xl h-11 pr-7 pl-2">
+          <div className="flex justify-between items-center bg-[#5B5C6B] w-75 h-11 ml-27 pr-7 pl-2 rounded-4xl">
             <input
               type="text"
               className="   text-white outline-0 placeholder:text-white "
