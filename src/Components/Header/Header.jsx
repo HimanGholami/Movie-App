@@ -37,7 +37,7 @@ function Header() {
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="size-6 text-white cursor-pointer"
+              className="size-6 text-white cursor-pointer"
             >
               <path
                 stroke-linecap="round"
@@ -54,7 +54,7 @@ function Header() {
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="size-7"
+              className="size-7"
             >
               <path
                 stroke-linecap="round"
