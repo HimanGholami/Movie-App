@@ -1,6 +1,7 @@
 import { createBrowserRouter, Outlet } from "react-router";
 import Rootlayout from "./Components/layouts/RootLayout";
 import Home from "./Pages/Home";
+import Movie from "./Pages/Movie";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "movies/:movieId",
+        element: <Movie />,
       },
     ],
   },

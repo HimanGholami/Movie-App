@@ -1,4 +1,6 @@
-function MovieCard({ title, year, imdb_rating, poster, genres }) {
+import { Link } from "react-router";
+
+function MovieCard({ id, title, year, imdb_rating, poster, genres }) {
   const genresList = {
     Crime: "جنایی",
     Action: "اکشن",
@@ -9,6 +11,8 @@ function MovieCard({ title, year, imdb_rating, poster, genres }) {
     Fantasy: "فانتزی",
     Western: "غربی",
   };
+
+  const MOVIE_URL = `/movies/${id}`;
   return (
     <div className="w-[28%]  bg-dark-header-bg mt-15 rounded-2xl overflow-hidden">
       <div className="">
@@ -16,16 +20,12 @@ function MovieCard({ title, year, imdb_rating, poster, genres }) {
       </div>
 
       <div className="text-white px-7 py-5">
-        <div className="mb-4">
-          <a href="" className="text-2xl">
-            {title}
-          </a>
+        <div className="mb-4 text-xl">
+          <Link to={MOVIE_URL}>{title}</Link>
         </div>
 
         <h6 className="mb-4">{year}</h6>
         <div className="flex gap-x-2 mb-3">
-          {console.log(genres)}
-
           {genres.map((genre) => (
             <h2 key={genre} className="bg-[#282424] px-2 py-1 rounded-md">
               {genresList[genre] || ""}
