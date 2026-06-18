@@ -1,6 +1,21 @@
 import MovieCard from "./MovieCard/MovieCard";
+import { useEffect, useState } from "react";
 
-function Movies({ movies }) {
+function Movies() {
+  const baseUrl = "http://moviesapi.ir/api/v1/movies";
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      const res = await fetch(baseUrl);
+      const moviesData = await res.json();
+
+      setMovies(moviesData.data);
+    };
+
+    fetchMovies();
+  }, []);
+
   return (
     <>
       <div className="container ">

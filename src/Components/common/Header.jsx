@@ -10,12 +10,18 @@ function Header() {
           </div>
           {/* Nav */}
           <nav>
-            <ul className="flex text-white gap-x-12  mr-12 text-xl">
+            <ul className="flex text-white gap-x-12  mr-12 text-lg">
               <li>
                 <a href="">ارتباط با ما</a>
               </li>
               <li>
                 <a href="">محبوب ها</a>
+              </li>
+              <li>
+                <a href="">جدید ها</a>
+              </li>
+              <li>
+                <a href="">جدید ها</a>
               </li>
               <li>
                 <a href="">جدید ها</a>

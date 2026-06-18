@@ -1,33 +1,8 @@
-import { useEffect, useState } from "react";
-import Footer from "./Components/Footer/Footer";
-import Header from "./Components/Header/Header";
-import Movies from "./Components/Movies/Movies";
+import { RouterProvider } from "react-router";
+import router from "./routes";
 
-function App() {
-  const baseUrl = "http://moviesapi.ir/api/v1/movies";
-
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    const fetchMovies = async () => {
-      const res = await fetch(baseUrl);
-      const moviesData = await res.json();
-
-      setMovies(moviesData.data);
-    };
-
-    fetchMovies();
-  }, []);
-
-  return (
-    <>
-      <Header />
-
-      <Movies movies={movies} />
-
-      <Footer />
-    </>
-  );
-}
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
